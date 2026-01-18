@@ -15,19 +15,80 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-session_start();
+
 // hide all error
 error_reporting(0);
-// check url
+session_start();
 
-ob_start("ob_gzhandler");
+$a = $_GET['a'];
+$b = $_GET['b'];
+$c = $_GET['c'];
+$d = $_GET['d'];
+$e = $_GET['e'];
+$f = $_GET['f'];
+$g = $_GET['g'];
+$h = $_GET['h'];
+$i = $_GET['i'];
+$j = $_GET['j'];
+$k = $_GET['k'];
+$l = $_GET['l'];
+$m = $_GET['m'];
+$n = $_GET['n'];
+$o = $_GET['o'];
+$p = $_GET['p'];
+$q = $_GET['q'];
+$r = $_GET['r'];
+$s = $_GET['s'];
+$t = $_GET['t'];
+$u = $_GET['u'];
+$v = $_GET['v'];
+$w = $_GET['w'];
+$x = $_GET['x'];
+$y = $_GET['y'];
+$z = $_GET['z'];
 
+$id = $_GET['id'];
+$session = $_GET['session'];
+$hotspot = $_GET['hotspot'];
+$userbyprofile = $_GET['userbyprofile'];
+$removeuserbyprofile = $_GET['removeuserbyprofile'];
+$ppp = $_GET['ppp'];
+$report = $_GET['report'];
+$system = $_GET['system'];
+$genieacs = $_GET['genieacs'];
+
+$remdata = $_GET['remdata'];
+$remlog = $_GET['remlog'];
+$remove = $_GET['remove'];
+$removereport = $_GET['removereport'];
+$removesch = $_GET['removesch'];
+$enablesch = $_GET['enablesch'];
+$disablesch = $_GET['disablesch'];
+$removeuser = $_GET['removeuser'];
+$removehotspotuser = $_GET['removehotspotuser'];
+$removepppuser = $_GET['removepppuser'];
+$resethotspotuser = $_GET['resethotspotuser'];
+$removehotspotusers = $_GET['removehotspotusers'];
+$removepppusers = $_GET['removepppusers'];
+$removeexpired = $_GET['removeexpired'];
+$removeuserprofile = $_GET['removeuserprofile'];
+$removeuserprofiles = $_GET['removeuserprofiles'];
+$removeall = $_GET['removeall'];
+$delete = $_GET['delete'];
+$reboot = $_GET['reboot'];
+$shutdown = $_GET['shutdown'];
+$macbinding = $_GET['macbinding'];
+$ipbinding = $_GET['ipbinding'];
+$removebinding = $_GET['removebinding'];
+$resetcounter = $_GET['resetcounter'];
+$resetcounters = $_GET['resetcounters'];
+$whatsapp = $_GET['whatsapp'];
 
 $url = $_SERVER['REQUEST_URI'];
+$theme = $_GET['theme'];
+$sessions = $_GET['sessions'];
 
 // load session MikroTik
-
-$session = $_GET['session'];
 
 if (!isset($_SESSION["mikhmon"])) {
   header("Location:./admin.php?id=login");
@@ -115,6 +176,7 @@ if (!isset($_SESSION["mikhmon"])) {
   $report = $_GET['report'];
   $removereport = $_GET['remove-report'];
   $minterface = $_GET['interface'];
+  $whatsapp = $_GET['whatsapp'];
 
 
   $pagehotspot = array('users','hosts','ipbinding','cookies','log','dhcp-leases');
@@ -497,8 +559,29 @@ elseif ($ppp == "edit-profile") {
     include_once('./process/pscheduler.php');
   }
 
-  ?>
+// whatsapp gateway
+  elseif ($whatsapp == "settings") {
+    include_once('./whatsapp/index.php');
+  }
+  elseif ($whatsapp == "test") {
+    include_once('./whatsapp/test.php');
+  }
+  elseif ($whatsapp == "webhook") {
+    include_once('./whatsapp/webhook.php');
+  }
+  elseif ($whatsapp == "log") {
+    include_once('./whatsapp/log.php');
+  }
+  elseif ($whatsapp == "api") {
+    include_once('./whatsapp/api_examples.php');
+  }
 
+// genieacs
+  elseif (isset($_GET['genieacs'])) {
+    include_once('./genieacs/index.php');
+  }
+
+  ?>
 </div>
 </div>
 </div>

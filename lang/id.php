@@ -147,13 +147,32 @@ $_user_user = "Username = Password";
 $_validity = "Masa Berlaku";
 $_voucher_code ="Kode Voucher";
 $_vouchers = "Voucher";
-$_yes = "Ya";
+$_whatsapp_gateway = "WhatsApp Gateway";
+$_whatsapp_settings = "Pengaturan WhatsApp";
+$_whatsapp_test = "Uji Koneksi";
+$_genieacs = "GenieACS";
+$_genieacs_devices = "Perangkat ONU";
+$_genieacs_settings = "Pengaturan GenieACS";
 
+$_delete_report = '
+<ul>
+		        <li>Menghapus Selling Report akan menghapus User Log juga.</li>
+		        <li>Disarankan untuk mengunduh '.$_user_log.' terlebih dahulu.</li>
+		      </ul>
+';
 
+$_help_report = '
+<ul>
+    <li>Klik CSV untuk mengunduh.</li>
+	<li>Untuk filter per bulan, pilih Day dan bulannya, kemudian klik Filter.<br>
+	<img width="70%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATUAAAAsCAYAAAAEsS/jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOlSURBVHhe7d09TtxAGMbxnCYSKOJDCggtqZIqHCRVpFwDiYJj0MARIq2i5QQUW6RH0CJST/x6bM/YM7Z38cfi1//iJ2F7PCvGfp+ZYQs+nH+7MACgBaEGQBVCDYAqhBoAVQg1AKoQagBUaQy1xdfv0fMA8F7VhtrBycLsH382Hz8dYgf2jxh74C2ioXZ4ujB7SVEdn33BjuQPKHYNmJtt6iEINdlyygrt+Ow8aIzxEGqA0ynUBMW0e4Qa4BBqChBqgEOoKUCoAQ6hpgChBjiEmgKEGuAQagoQaoBDqClAqAHOiKF2bZZP/8zLa+jhNtYem+oUardr8/J0by5j14AJGj3UggC7ujePBFsnhBrg7D7UhBTW69rc5MdZ0LnV3LNZXltlrN+vkeH3n3W/7fVxde+em7ffyj/e7W3Iu1lb0GmoNY2+vrc1y9eyue/deyvlSQN6Zh6SNe+bhat09N2nr9f3016yD51rtD3MwZD0MF2rpy5oVT7ByywohL5ZoAHrHCvz4+St4iHIu1lb0FmptY58HXjGp2JDJg6c51LK+vAkpbV+Epm0bXPf7Y1U5S0PWw4Ch1nSt+nKXZ+v0WmnlpoM/OzXNSqK3UIsojX0aat7KLeGvnIMQqjyrQKm/SNvK58lnaVqRY3ND1cPIoZbN3DmvWPyXW36uLZoJ82enpllJ9B9qNWPfU6il9xT9N4Ra6b2Qn8ufjfkYqh7G2X56BVW7rSkKUdrq2nr6ZEZqm5VEf6HWMvYdQ60Is2h/5ba5tE/pX9qW+sbcDFEP43xREFk5xIslKYZV0lbh1jMnM1LbrCS2eYhFSOTn/PFuG/tOoZY9M3+ltUGo2Tb2CwS2nvM2RD0ME2rpS+ud9wOuOPZm90w+60dDcma2eYjV8fVDqXXsW0LNtnfX05ArnlE1tOxx8/ZT2Pem9C0s0GD0UEuLpCR8WYttipCCqhRLqlqAM7ZVqCWC8W265o99W6hV7n9c3ZUnsjwkU9KPDTK7AqsLtdgKEKg3Yqj1TArE30bN2LahNjUSamw9sanJhpqsCGKz+hzpDjVZ4YereaDO9EIt+xscqzRHbahl21VWadjG9EINAbWhBrwBoaYAoQY4hJoChBrgEGoKEGqA0ynU3D8zjt+AcRBqgNMp1MTBycLsHfFf2neJUAOczqEmDk8X6Yot7wzj2k8mldh5AM1qQ03IVjR2HgDeq8ZQA4CpIdQAqEKoAVCFUAOgCqEGQBVCDYAiF+Y/bd3pxgv3MhEAAAAASUVORK5CYII=">
+	</li>
+	<li>Filter berdasarkan '.$_prefix.', isikan '.$_prefix.' '.$_user_name.' di kolom '.$_search.', kemudian klik filter.</li>
+	<li>Filter berdasarkan '.$_comment.', isikan !!'.$_comment.' di kolom '.$_search.', kemudian klik filter. Atau klik salah satu '.$_comment.'. (Mikhmon Online).</li>
+	<li>Disarankan untuk menghapus laporan penjualan setelah mengunduh laporan CSV.</li>
+	</ul>
+';
 
-
-
-//details
 $_format_time_limit = '
     Format '.$_time_limit.'.<br>
     [wdhm] Contoh : 30d = 30'.$_days.', 12h = 12'.$_hours.', 4w3d = 31'.$_days.'.
@@ -187,21 +206,8 @@ $_format_ip_binding = '
     [d] Contoh : 30d = 30'.$_days.'.<br>
 ';
 
-$_help_report = '
-<ul>
-    <li>Klik CSV untuk mengunduh.</li>
-	<li>Untuk filter per bulan, pilih Day dan bulannya, kemudian klik Filter.<br>
-	<img width="70%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATUAAAAsCAYAAAAEsS/jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOlSURBVHhe7d09TtxAGMbxnCYSKOJDCggtqZIqHCRVpFwDiYJj0MARIq2i5QQUW6RH0CJST/x6bM/YM7Z38cfi1//iJ2F7PCvGfp+ZYQs+nH+7MACgBaEGQBVCDYAqhBoAVQg1AKoQagBUaQy1xdfv0fMA8F7VhtrBycLsH382Hz8dYgf2jxh74C2ioXZ4ujB7SVEdn33BjuQPKHYNmJtt6iEINdlyygrt+Ow8aIzxEGqA0ynUBMW0e4Qa4BBqChBqgEOoKUCoAQ6hpgChBjiEmgKEGuAQagoQaoBDqClAqAHOiKF2bZZP/8zLa+jhNtYem+oUardr8/J0by5j14AJGj3UggC7ujePBFsnhBrg7D7UhBTW69rc5MdZ0LnV3LNZXtlrN+vkeH3n3W/7fVxde+em7ffyj/e7W3Iu1lb0GmoNY2+vrc1y9eyue/deyvlSQN6Zh6SNe+bhat09N2nr9f3016yD51rtD3MwZD0MF2rpy5oVT7ByywohL5ZoAHrHCvz4+St4iHIu1lb0FmptY58HXjGp2JDJg6c51LK+vAkpbV+Epm0bXPf7Y1U5S0PWw4Ch1nSt+nKXZ+v0WmnlpoM/OzXNSqK3UIsojX0aat7KLeGvnIMQqjyrQKm/SNvK58lnaVqRY3ND1cPIoZbN3DmvWPyXW36uLZoJ82enpllJ9B9qNWPfU6il9xT9N4Ra6b2Qn8ufjfkYqh7G2X56BVW7rSkKUdrq2nr6ZEZqm5VEf6HWMvYdQ60Is2h/5ba5tE/pX9qW+sbcDFEP43xREFk5xIslKYZV0lbh1jMnM1LbrCS2eYhFSOTn/PFuG/tOoZY9M3+ltUGo2Tb2CwS2nvM2RD0ME2rpS+ud9wOuOPZm90w+60dDcma2eYjV8fVDqXXsW0LNtnfX05ArnlE1tOxx8/ZT2Pem9C0s0GD0UEuLpCR8WYttipCCqhRLqlqAM7ZVqCWC8W265o99W6hV7n9c3ZUnsjwkU9KPDTK7AqsLtdgKEKg3Yqj1TArE30bN2LahNjUSamw9sanJhpqsCGKz+hzpDjVZ4YereaDO9EIt+xscqzRHbahl21VWadjG9EINAbWhBrwBoaYAoQY4hJoChBrgEGoKEGqA0ynU3D8zjt+AcRBqgNMp1MTBycLsHfFf2neJUAOczqEmDk8X6Yot7wzj2k8mldh5AM1qQ03IVjR2HgDeq8ZQA4CpIdQAqEKoAVCFUAOgCqEGQBVCDYAiF+Y/bd3pxgv3MhEAAAAASUVORK5CYII=">
-	</li>
-	<li>Filter berdasarkan '.$_prefix.', isikan '.$_prefix.' '.$_user_name.' di kolom '.$_search.', kemudian klik filter.</li>
-	<li>Filter berdasarkan '.$_comment.', isikan !!'.$_comment.' di kolom '.$_search.', kemudian klik filter. Atau klik salah satu '.$_comment.'. (Mikhmon Online).</li>
-	<li>Disarankan untuk menghapus laporan penjualan setelah mengunduh laporan CSV.</li>
-	</ul>
-';
+$_whatsapp_gateway = "WhatsApp Gateway";
+$_whatsapp_settings = "Pengaturan WhatsApp";
+$_whatsapp_test = "Uji Koneksi";
 
-$_delete_report = '
-<ul>
-		        <li>Menghapus Selling Report akan menghapus User Log juga.</li>
-		        <li>Disarankan untuk mengunduh '.$_user_log.' terlebih dahulu.</li>
-		      </ul>
-';
+?>

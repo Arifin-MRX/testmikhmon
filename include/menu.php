@@ -319,6 +319,17 @@ include('./info.php');
   <!--cookies-->
    <a href="./?hotspot=cookies&session=<?= $session; ?>" class="menu <?= $scookies; ?>"><i class=" fa fa-hourglass"></i> <?= $_hotspot_cookies ?></a>
   </div>
+  <!--secrets--> 
+  <div class="dropdown-btn <?= $ssecrets; ?>"><i class="fa fa-users"></i> PPPOE Server
+    <i class="fa fa-caret-down"></i>
+  </div>
+  <div class="dropdown-container <?= $pppmenu; ?>">
+    <a href="./?ppp=secrets&profile=all&session=<?= $session; ?>" class="<?= $ssecrets; ?>"> &nbsp;&nbsp;&nbsp;<i class="fa fa-list "></i> <?= $_ppp_secrets ?> </a>
+	<a href="./?ppp=addsecret&session=<?= $session; ?>" class="<?= $spactive; ?>"> &nbsp;&nbsp;&nbsp;<i class="fa fa-user-plus "></i> Add Secrets</a>
+	<a href="./?ppp=active&session=<?= $session; ?>" class="<?= $spactive; ?>"> &nbsp;&nbsp;&nbsp;<i class="fa fa-wifi"></i> <?= $_ppp_active ?></a>
+	<a href="./?ppp=profiles&session=<?= $session; ?>" class="<?= $spprofile; ?>"> &nbsp;&nbsp;&nbsp;<i class="fa fa-list "></i> <?= $_ppp_profiles ?> </a>
+	<a href="./?ppp=add-profile&session=<?= $session; ?>"> &nbsp;&nbsp;&nbsp;<i class="fa fa-user-plus "></i> Add PPP Profile</a>
+  </div>
   <!--quick print-->
   <a href="./?hotspot=quick-print&session=<?= $session; ?>" class="menu <?= $squick; ?>"> <i class="fa fa-print"></i> <?= $_quick_print ?> </a>
   <!--vouchers-->
@@ -346,6 +357,24 @@ include('./info.php');
   <a href="./?interface=traffic-monitor&session=<?= $session; ?>" class="menu <?= $strafficmonitor; ?>"><i class=" fa fa-area-chart"></i> <?= $_traffic_monitor ?></a>
   <!--report-->
   <a href="./?report=selling&idbl=<?= strtolower(date("M")) . date("Y"); ?>&session=<?= $session; ?>" class="menu <?= $sselling; ?>"><i class="nav-icon fa fa-money"></i> <?= $_report ?></a>
+  <!--whatsapp-->
+  <div class="dropdown-btn"><i class="fa fa-whatsapp"></i> <?= $_whatsapp_gateway ?>
+    <i class="fa fa-caret-down"></i> &nbsp;
+  </div>
+  <div class="dropdown-container">
+    <a href="./?whatsapp=settings&session=<?= $session; ?>" class="menu"> <i class="fa fa-cog"></i> <?= $_whatsapp_settings ?> </a>
+    <a href="./?whatsapp=test&session=<?= $session; ?>" class="menu"> <i class="fa fa-test"></i> <?= $_whatsapp_test ?> </a>
+    <a href="./?whatsapp=log&session=<?= $session; ?>" class="menu"> <i class="fa fa-file-text"></i> Log </a>
+    <a href="./?whatsapp=api&session=<?= $session; ?>" class="menu"> <i class="fa fa-code"></i> API Examples </a>
+  </div>
+  <!--genieacs-->
+  <div class="dropdown-btn"><i class="fa fa-server"></i> <?= $_genieacs ?>
+    <i class="fa fa-caret-down"></i> &nbsp;
+  </div>
+  <div class="dropdown-container">
+    <a href="./?genieacs&action=list&session=<?= $session; ?>" class="menu"> <i class="fa fa-list"></i> <?= $_genieacs_devices ?> </a>
+    <a href="./?genieacs&action=settings&session=<?= $session; ?>" class="menu"> <i class="fa fa-cog"></i> <?= $_genieacs_settings ?> </a>
+  </div>
   <!--settings-->
   <div class="dropdown-btn <?= $ssett; ?>"><i class=" fa fa-gear"></i> <?= $_settings ?> 
     <i class="fa fa-caret-down"></i> &nbsp;
